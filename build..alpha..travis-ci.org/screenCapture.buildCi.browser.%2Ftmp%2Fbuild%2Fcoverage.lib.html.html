@@ -1,7 +1,5 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <title>Code coverage report for node-npmtest-concat-stream/concat-stream/index.js</title>
+<html lang="en"><head>
+    <title>Code coverage report for node-npmtest-concat-stream/node_modules/concat-stream/index.js</title>
     <meta charset="utf-8">
     <style>
         body, html {
@@ -194,7 +192,7 @@
     <h1 style="font-weight: bold;">
         <a href="https://github.com/npmtest/node-npmtest-concat-stream">npmtest-concat-stream (v0.0.1)</a>
     </h1>
-    <h1>Code coverage report for <span class="entity">node-npmtest-concat-stream/concat-stream/index.js</span></h1>
+    <h1>Code coverage report for <span class="entity">node-npmtest-concat-stream/node_modules/concat-stream/index.js</span></h1>
     <h2>
         
         Statements: <span class="metric">15.6% <small>(17 / 109)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
@@ -210,11 +208,11 @@
         
         Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
     </h2>
-    <div class="path"><a href="../../index.html">All files</a> &#187; <a href="index.html">node-npmtest-concat-stream/concat-stream/</a> &#187; index.js</div>
+    <div class="path"><a href="../../../index.html">All files</a> » <a href="index.html">node-npmtest-concat-stream/node_modules/concat-stream/</a> » index.js</div>
 </div>
 <div class="body">
 <pre><table class="coverage">
-<tr><td class="line-count">1
+<tbody><tr><td class="line-count">1
 2
 3
 4
@@ -505,152 +503,153 @@
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">var Writable = require('readable-stream').Writable
 var inherits = require('inherits')
 &nbsp;
-<span class="missing-if-branch" title="if path not taken" >I</span>if (typeof Uint8Array === 'undefined') {
-<span class="cstat-no" title="statement not covered" >  var U8 = require('typedarray').Uint8Array</span>
+<span class="missing-if-branch" title="if path not taken">I</span>if (typeof Uint8Array === 'undefined') {
+<span class="cstat-no" title="statement not covered">  var U8 = require('typedarray').Uint8Array</span>
 } else {
   var U8 = Uint8Array
 }
 &nbsp;
-<span class="fstat-no" title="function not covered" >function ConcatStream(opts, cb) {</span>
-<span class="cstat-no" title="statement not covered" >  if (!(this instanceof ConcatStream)) <span class="cstat-no" title="statement not covered" >return new ConcatStream(opts, cb)</span></span>
+<span class="fstat-no" title="function not covered">function ConcatStream(opts, cb) {</span>
+<span class="cstat-no" title="statement not covered">  if (!(this instanceof ConcatStream)) <span class="cstat-no" title="statement not covered">return new ConcatStream(opts, cb)</span></span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  if (typeof opts === 'function') {</span>
-<span class="cstat-no" title="statement not covered" >    cb = opts</span>
-<span class="cstat-no" title="statement not covered" >    opts = {}</span>
+<span class="cstat-no" title="statement not covered">  if (typeof opts === 'function') {</span>
+<span class="cstat-no" title="statement not covered">    cb = opts</span>
+<span class="cstat-no" title="statement not covered">    opts = {}</span>
   }
-<span class="cstat-no" title="statement not covered" >  if (!opts) <span class="cstat-no" title="statement not covered" >opts = {}</span></span>
+<span class="cstat-no" title="statement not covered">  if (!opts) <span class="cstat-no" title="statement not covered">opts = {}</span></span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  var encoding = opts.encoding</span>
-<span class="cstat-no" title="statement not covered" >  var shouldInferEncoding = false</span>
+<span class="cstat-no" title="statement not covered">  var encoding = opts.encoding</span>
+<span class="cstat-no" title="statement not covered">  var shouldInferEncoding = false</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  if (!encoding) {</span>
-<span class="cstat-no" title="statement not covered" >    shouldInferEncoding = true</span>
+<span class="cstat-no" title="statement not covered">  if (!encoding) {</span>
+<span class="cstat-no" title="statement not covered">    shouldInferEncoding = true</span>
   } else {
-<span class="cstat-no" title="statement not covered" >    encoding =  String(encoding).toLowerCase()</span>
-<span class="cstat-no" title="statement not covered" >    if (encoding === 'u8' || encoding === 'uint8') {</span>
-<span class="cstat-no" title="statement not covered" >      encoding = 'uint8array'</span>
+<span class="cstat-no" title="statement not covered">    encoding =  String(encoding).toLowerCase()</span>
+<span class="cstat-no" title="statement not covered">    if (encoding === 'u8' || encoding === 'uint8') {</span>
+<span class="cstat-no" title="statement not covered">      encoding = 'uint8array'</span>
     }
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  Writable.call(this, { objectMode: true })</span>
+<span class="cstat-no" title="statement not covered">  Writable.call(this, { objectMode: true })</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  this.encoding = encoding</span>
-<span class="cstat-no" title="statement not covered" >  this.shouldInferEncoding = shouldInferEncoding</span>
+<span class="cstat-no" title="statement not covered">  this.encoding = encoding</span>
+<span class="cstat-no" title="statement not covered">  this.shouldInferEncoding = shouldInferEncoding</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  if (cb) <span class="cstat-no" title="statement not covered" >this.on('finish', <span class="fstat-no" title="function not covered" >function () {</span> <span class="cstat-no" title="statement not covered" >cb(this.getBody()) }</span>)</span></span>
-<span class="cstat-no" title="statement not covered" >  this.body = []</span>
+<span class="cstat-no" title="statement not covered">  if (cb) <span class="cstat-no" title="statement not covered">this.on('finish', <span class="fstat-no" title="function not covered">function () {</span> <span class="cstat-no" title="statement not covered">cb(this.getBody()) }</span>)</span></span>
+<span class="cstat-no" title="statement not covered">  this.body = []</span>
 }
 &nbsp;
 module.exports = ConcatStream
 inherits(ConcatStream, Writable)
 &nbsp;
-ConcatStream.prototype._write = <span class="fstat-no" title="function not covered" >function(chunk, enc, next) {</span>
-<span class="cstat-no" title="statement not covered" >  this.body.push(chunk)</span>
-<span class="cstat-no" title="statement not covered" >  next()</span>
+ConcatStream.prototype._write = <span class="fstat-no" title="function not covered">function(chunk, enc, next) {</span>
+<span class="cstat-no" title="statement not covered">  this.body.push(chunk)</span>
+<span class="cstat-no" title="statement not covered">  next()</span>
 }
 &nbsp;
-ConcatStream.prototype.inferEncoding = <span class="fstat-no" title="function not covered" >function (buff) {</span>
-<span class="cstat-no" title="statement not covered" >  var firstBuffer = buff === undefined ? this.body[0] : buff;</span>
-<span class="cstat-no" title="statement not covered" >  if (Buffer.isBuffer(firstBuffer)) <span class="cstat-no" title="statement not covered" >return 'buffer'</span></span>
-<span class="cstat-no" title="statement not covered" >  if (typeof Uint8Array !== 'undefined' &amp;&amp; firstBuffer instanceof Uint8Array) <span class="cstat-no" title="statement not covered" >return 'uint8array'</span></span>
-<span class="cstat-no" title="statement not covered" >  if (Array.isArray(firstBuffer)) <span class="cstat-no" title="statement not covered" >return 'array'</span></span>
-<span class="cstat-no" title="statement not covered" >  if (typeof firstBuffer === 'string') <span class="cstat-no" title="statement not covered" >return 'string'</span></span>
-<span class="cstat-no" title="statement not covered" >  if (Object.prototype.toString.call(firstBuffer) === "[object Object]") <span class="cstat-no" title="statement not covered" >return 'object'</span></span>
-<span class="cstat-no" title="statement not covered" >  return 'buffer'</span>
+ConcatStream.prototype.inferEncoding = <span class="fstat-no" title="function not covered">function (buff) {</span>
+<span class="cstat-no" title="statement not covered">  var firstBuffer = buff === undefined ? this.body[0] : buff;</span>
+<span class="cstat-no" title="statement not covered">  if (Buffer.isBuffer(firstBuffer)) <span class="cstat-no" title="statement not covered">return 'buffer'</span></span>
+<span class="cstat-no" title="statement not covered">  if (typeof Uint8Array !== 'undefined' &amp;&amp; firstBuffer instanceof Uint8Array) <span class="cstat-no" title="statement not covered">return 'uint8array'</span></span>
+<span class="cstat-no" title="statement not covered">  if (Array.isArray(firstBuffer)) <span class="cstat-no" title="statement not covered">return 'array'</span></span>
+<span class="cstat-no" title="statement not covered">  if (typeof firstBuffer === 'string') <span class="cstat-no" title="statement not covered">return 'string'</span></span>
+<span class="cstat-no" title="statement not covered">  if (Object.prototype.toString.call(firstBuffer) === "[object Object]") <span class="cstat-no" title="statement not covered">return 'object'</span></span>
+<span class="cstat-no" title="statement not covered">  return 'buffer'</span>
 }
 &nbsp;
-ConcatStream.prototype.getBody = <span class="fstat-no" title="function not covered" >function () {</span>
-<span class="cstat-no" title="statement not covered" >  if (!this.encoding &amp;&amp; this.body.length === 0) <span class="cstat-no" title="statement not covered" >return []</span></span>
-<span class="cstat-no" title="statement not covered" >  if (this.shouldInferEncoding) <span class="cstat-no" title="statement not covered" >this.encoding = this.inferEncoding()</span></span>
-<span class="cstat-no" title="statement not covered" >  if (this.encoding === 'array') <span class="cstat-no" title="statement not covered" >return arrayConcat(this.body)</span></span>
-<span class="cstat-no" title="statement not covered" >  if (this.encoding === 'string') <span class="cstat-no" title="statement not covered" >return stringConcat(this.body)</span></span>
-<span class="cstat-no" title="statement not covered" >  if (this.encoding === 'buffer') <span class="cstat-no" title="statement not covered" >return bufferConcat(this.body)</span></span>
-<span class="cstat-no" title="statement not covered" >  if (this.encoding === 'uint8array') <span class="cstat-no" title="statement not covered" >return u8Concat(this.body)</span></span>
-<span class="cstat-no" title="statement not covered" >  return this.body</span>
+ConcatStream.prototype.getBody = <span class="fstat-no" title="function not covered">function () {</span>
+<span class="cstat-no" title="statement not covered">  if (!this.encoding &amp;&amp; this.body.length === 0) <span class="cstat-no" title="statement not covered">return []</span></span>
+<span class="cstat-no" title="statement not covered">  if (this.shouldInferEncoding) <span class="cstat-no" title="statement not covered">this.encoding = this.inferEncoding()</span></span>
+<span class="cstat-no" title="statement not covered">  if (this.encoding === 'array') <span class="cstat-no" title="statement not covered">return arrayConcat(this.body)</span></span>
+<span class="cstat-no" title="statement not covered">  if (this.encoding === 'string') <span class="cstat-no" title="statement not covered">return stringConcat(this.body)</span></span>
+<span class="cstat-no" title="statement not covered">  if (this.encoding === 'buffer') <span class="cstat-no" title="statement not covered">return bufferConcat(this.body)</span></span>
+<span class="cstat-no" title="statement not covered">  if (this.encoding === 'uint8array') <span class="cstat-no" title="statement not covered">return u8Concat(this.body)</span></span>
+<span class="cstat-no" title="statement not covered">  return this.body</span>
 }
 &nbsp;
-var isArray = Array.isArray || <span class="fstat-no" title="function not covered" ><span class="branch-1 cbranch-no" title="branch not covered" >function (arr) {</span></span>
-<span class="cstat-no" title="statement not covered" >  return Object.prototype.toString.call(arr) == '[object Array]'</span>
+var isArray = Array.isArray || <span class="fstat-no" title="function not covered"><span class="branch-1 cbranch-no" title="branch not covered">function (arr) {</span></span>
+<span class="cstat-no" title="statement not covered">  return Object.prototype.toString.call(arr) == '[object Array]'</span>
 }
 &nbsp;
-<span class="fstat-no" title="function not covered" >function isArrayish (arr) {</span>
-<span class="cstat-no" title="statement not covered" >  return /Array\]$/.test(Object.prototype.toString.call(arr))</span>
+<span class="fstat-no" title="function not covered">function isArrayish (arr) {</span>
+<span class="cstat-no" title="statement not covered">  return /Array\]$/.test(Object.prototype.toString.call(arr))</span>
 }
 &nbsp;
-<span class="fstat-no" title="function not covered" >function isBufferish (p) {</span>
-<span class="cstat-no" title="statement not covered" >  return typeof p === 'string' || isArrayish(p) || (p &amp;&amp; typeof p.subarray === 'function')</span>
+<span class="fstat-no" title="function not covered">function isBufferish (p) {</span>
+<span class="cstat-no" title="statement not covered">  return typeof p === 'string' || isArrayish(p) || (p &amp;&amp; typeof p.subarray === 'function')</span>
 }
 &nbsp;
-<span class="fstat-no" title="function not covered" >function stringConcat (parts) {</span>
-<span class="cstat-no" title="statement not covered" >  var strings = []</span>
-<span class="cstat-no" title="statement not covered" >  var needsToString = false</span>
-<span class="cstat-no" title="statement not covered" >  for (var i = 0; i &lt; parts.length; i++) {</span>
-<span class="cstat-no" title="statement not covered" >    var p = parts[i]</span>
-<span class="cstat-no" title="statement not covered" >    if (typeof p === 'string') {</span>
-<span class="cstat-no" title="statement not covered" >      strings.push(p)</span>
-    } else <span class="cstat-no" title="statement not covered" >if (Buffer.isBuffer(p)) {</span>
-<span class="cstat-no" title="statement not covered" >      strings.push(p)</span>
-    } else <span class="cstat-no" title="statement not covered" >if (isBufferish(p)) {</span>
-<span class="cstat-no" title="statement not covered" >      strings.push(new Buffer(p))</span>
+<span class="fstat-no" title="function not covered">function stringConcat (parts) {</span>
+<span class="cstat-no" title="statement not covered">  var strings = []</span>
+<span class="cstat-no" title="statement not covered">  var needsToString = false</span>
+<span class="cstat-no" title="statement not covered">  for (var i = 0; i &lt; parts.length; i++) {</span>
+<span class="cstat-no" title="statement not covered">    var p = parts[i]</span>
+<span class="cstat-no" title="statement not covered">    if (typeof p === 'string') {</span>
+<span class="cstat-no" title="statement not covered">      strings.push(p)</span>
+    } else <span class="cstat-no" title="statement not covered">if (Buffer.isBuffer(p)) {</span>
+<span class="cstat-no" title="statement not covered">      strings.push(p)</span>
+    } else <span class="cstat-no" title="statement not covered">if (isBufferish(p)) {</span>
+<span class="cstat-no" title="statement not covered">      strings.push(new Buffer(p))</span>
     } else {
-<span class="cstat-no" title="statement not covered" >      strings.push(new Buffer(String(p)))</span>
+<span class="cstat-no" title="statement not covered">      strings.push(new Buffer(String(p)))</span>
     }
   }
-<span class="cstat-no" title="statement not covered" >  if (Buffer.isBuffer(parts[0])) {</span>
-<span class="cstat-no" title="statement not covered" >    strings = Buffer.concat(strings)</span>
-<span class="cstat-no" title="statement not covered" >    strings = strings.toString('utf8')</span>
+<span class="cstat-no" title="statement not covered">  if (Buffer.isBuffer(parts[0])) {</span>
+<span class="cstat-no" title="statement not covered">    strings = Buffer.concat(strings)</span>
+<span class="cstat-no" title="statement not covered">    strings = strings.toString('utf8')</span>
   } else {
-<span class="cstat-no" title="statement not covered" >    strings = strings.join('')</span>
+<span class="cstat-no" title="statement not covered">    strings = strings.join('')</span>
   }
-<span class="cstat-no" title="statement not covered" >  return strings</span>
+<span class="cstat-no" title="statement not covered">  return strings</span>
 }
 &nbsp;
-<span class="fstat-no" title="function not covered" >function bufferConcat (parts) {</span>
-<span class="cstat-no" title="statement not covered" >  var bufs = []</span>
-<span class="cstat-no" title="statement not covered" >  for (var i = 0; i &lt; parts.length; i++) {</span>
-<span class="cstat-no" title="statement not covered" >    var p = parts[i]</span>
-<span class="cstat-no" title="statement not covered" >    if (Buffer.isBuffer(p)) {</span>
-<span class="cstat-no" title="statement not covered" >      bufs.push(p)</span>
-    } else <span class="cstat-no" title="statement not covered" >if (isBufferish(p)) {</span>
-<span class="cstat-no" title="statement not covered" >      bufs.push(new Buffer(p))</span>
+<span class="fstat-no" title="function not covered">function bufferConcat (parts) {</span>
+<span class="cstat-no" title="statement not covered">  var bufs = []</span>
+<span class="cstat-no" title="statement not covered">  for (var i = 0; i &lt; parts.length; i++) {</span>
+<span class="cstat-no" title="statement not covered">    var p = parts[i]</span>
+<span class="cstat-no" title="statement not covered">    if (Buffer.isBuffer(p)) {</span>
+<span class="cstat-no" title="statement not covered">      bufs.push(p)</span>
+    } else <span class="cstat-no" title="statement not covered">if (isBufferish(p)) {</span>
+<span class="cstat-no" title="statement not covered">      bufs.push(new Buffer(p))</span>
     } else {
-<span class="cstat-no" title="statement not covered" >      bufs.push(new Buffer(String(p)))</span>
+<span class="cstat-no" title="statement not covered">      bufs.push(new Buffer(String(p)))</span>
     }
   }
-<span class="cstat-no" title="statement not covered" >  return Buffer.concat(bufs)</span>
+<span class="cstat-no" title="statement not covered">  return Buffer.concat(bufs)</span>
 }
 &nbsp;
-<span class="fstat-no" title="function not covered" >function arrayConcat (parts) {</span>
-<span class="cstat-no" title="statement not covered" >  var res = []</span>
-<span class="cstat-no" title="statement not covered" >  for (var i = 0; i &lt; parts.length; i++) {</span>
-<span class="cstat-no" title="statement not covered" >    res.push.apply(res, parts[i])</span>
+<span class="fstat-no" title="function not covered">function arrayConcat (parts) {</span>
+<span class="cstat-no" title="statement not covered">  var res = []</span>
+<span class="cstat-no" title="statement not covered">  for (var i = 0; i &lt; parts.length; i++) {</span>
+<span class="cstat-no" title="statement not covered">    res.push.apply(res, parts[i])</span>
   }
-<span class="cstat-no" title="statement not covered" >  return res</span>
+<span class="cstat-no" title="statement not covered">  return res</span>
 }
 &nbsp;
-<span class="fstat-no" title="function not covered" >function u8Concat (parts) {</span>
-<span class="cstat-no" title="statement not covered" >  var len = 0</span>
-<span class="cstat-no" title="statement not covered" >  for (var i = 0; i &lt; parts.length; i++) {</span>
-<span class="cstat-no" title="statement not covered" >    if (typeof parts[i] === 'string') {</span>
-<span class="cstat-no" title="statement not covered" >      parts[i] = new Buffer(parts[i])</span>
+<span class="fstat-no" title="function not covered">function u8Concat (parts) {</span>
+<span class="cstat-no" title="statement not covered">  var len = 0</span>
+<span class="cstat-no" title="statement not covered">  for (var i = 0; i &lt; parts.length; i++) {</span>
+<span class="cstat-no" title="statement not covered">    if (typeof parts[i] === 'string') {</span>
+<span class="cstat-no" title="statement not covered">      parts[i] = new Buffer(parts[i])</span>
     }
-<span class="cstat-no" title="statement not covered" >    len += parts[i].length</span>
+<span class="cstat-no" title="statement not covered">    len += parts[i].length</span>
   }
-<span class="cstat-no" title="statement not covered" >  var u8 = new U8(len)</span>
-<span class="cstat-no" title="statement not covered" >  for (var i = 0, offset = 0; i &lt; parts.length; i++) {</span>
-<span class="cstat-no" title="statement not covered" >    var part = parts[i]</span>
-<span class="cstat-no" title="statement not covered" >    for (var j = 0; j &lt; part.length; j++) {</span>
-<span class="cstat-no" title="statement not covered" >      u8[offset++] = part[j]</span>
+<span class="cstat-no" title="statement not covered">  var u8 = new U8(len)</span>
+<span class="cstat-no" title="statement not covered">  for (var i = 0, offset = 0; i &lt; parts.length; i++) {</span>
+<span class="cstat-no" title="statement not covered">    var part = parts[i]</span>
+<span class="cstat-no" title="statement not covered">    for (var j = 0; j &lt; part.length; j++) {</span>
+<span class="cstat-no" title="statement not covered">      u8[offset++] = part[j]</span>
     }
   }
-<span class="cstat-no" title="statement not covered" >  return u8</span>
+<span class="cstat-no" title="statement not covered">  return u8</span>
 }
 &nbsp;
 &nbsp;</pre></td></tr>
-</table></pre>
+</tbody></table></pre>
 </div>
 <div class="footer">
-    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Tue Apr 11 2017 08:32:57 GMT+0000 (UTC)</div>
+    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Mon Apr 17 2017 11:29:50 GMT+0000 (UTC)</div>
 </div>
-</body>
-</html>
+
+
+</body></html>
