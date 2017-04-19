@@ -1,4 +1,7 @@
-# test coverage for  [concat-stream (v1.6.0)](https://github.com/maxogden/concat-stream)  [![npm package](https://img.shields.io/npm/v/npmtest-concat-stream.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-concat-stream) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-concat-stream.svg)](https://travis-ci.org/npmtest/node-npmtest-concat-stream)
+# npmtest-concat-stream
+
+#### test coverage for  [concat-stream (v1.6.0)](https://github.com/maxogden/concat-stream)  [![npm package](https://img.shields.io/npm/v/npmtest-concat-stream.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-concat-stream) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-concat-stream.svg)](https://travis-ci.org/npmtest/node-npmtest-concat-stream)
+
 #### writable stream that concatenates strings or binary data and calls a callback with the result
 
 [![NPM](https://nodei.co/npm/concat-stream.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/concat-stream)
